@@ -1,0 +1,287 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | MediCare+</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+
+<!-- TOP BAR -->
+<div class="top-bar">
+    <div class="top-left">
+        <span>
+            <i class="fa-solid fa-phone"></i>
+            Emergency: +91 98765 43210
+        </span>
+
+        <span>
+            <i class="fa-solid fa-envelope"></i>
+            support@medicareplus.com
+        </span>
+    </div>
+
+    <div class="top-right">
+        <span>
+            <i class="fa-solid fa-clock"></i>
+            24/7 Healthcare Services
+        </span>
+    </div>
+</div>
+
+<!-- NAVIGATION -->
+<header class="navbar">
+
+    <div class="logo">
+        <div class="logo-icon">
+            <i class="fa-solid fa-heart-pulse"></i>
+        </div>
+
+        <div>
+            <h2>MediCare<span>+</span></h2>
+            <small>Hospital & Pharmacy</small>
+        </div>
+    </div>
+
+    <nav id="navMenu">
+        <a href="index.html">
+            <i class="fa-solid fa-house"></i> Home
+        </a>
+        <a href="about.html">About Us</a>
+        <a href="departments.html">Departments</a>
+        <a href="doctors.html">Doctors</a>
+        <a href="appointment.html">Appointments</a>
+        <a href="pharmacy.html">Pharmacy</a>
+        <a href="laboratory.html">Laboratory</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <div class="nav-actions">
+        <a href="login.html" class="login-btn">
+            <i class="fa-solid fa-user"></i> Login
+        </a>
+
+        <a href="appointment.html" class="appointment-btn">
+            Book Appointment
+        </a>
+    </div>
+
+    <button class="menu-btn" id="menuBtn" type="button">
+        <i class="fa-solid fa-bars"></i>
+    </button>
+
+</header>
+
+<!-- LOGIN SECTION -->
+<section class="login-section">
+
+    <div class="login-card">
+
+        <div class="login-icon">
+            <i class="fa-solid fa-user"></i>
+        </div>
+
+        <span class="section-tag">PATIENT LOGIN</span>
+
+        <h1>Welcome Back</h1>
+
+        <p>
+            Login to access your MediCare+ healthcare
+            information and services.
+        </p>
+
+        <!-- DATABASE-CONNECTED LOGIN FORM -->
+        <form id="loginForm" action="login.php" method="POST">
+
+            <div class="login-group">
+                <label for="mobile">Registered Mobile Number</label>
+
+                <div class="login-input">
+                    <i class="fa-solid fa-phone"></i>
+
+                    <input
+                        type="tel"
+                        id="mobile"
+                        name="mobile"
+                        placeholder="Enter 10 digit mobile number"
+                        maxlength="10"
+                        pattern="[0-9]{10}"
+                        inputmode="numeric"
+                        autocomplete="tel"
+                        required
+                    >
+                </div>
+            </div>
+
+            <div class="login-group">
+                <label for="password">Password</label>
+
+                <div class="login-input">
+                    <i class="fa-solid fa-lock"></i>
+
+                    <input
+                        type="password"
+                        id="password"
+                        name="password"
+                        placeholder="Enter your password"
+                        autocomplete="current-password"
+                        required
+                    >
+                </div>
+            </div>
+
+            <div class="login-options">
+                <label>
+                    <input type="checkbox" name="remember">
+                    Remember me
+                </label>
+
+                <a href="#" id="forgotPassword">
+                    Forgot Password?
+                </a>
+            </div>
+
+            <button type="submit" class="login-submit">
+                <i class="fa-solid fa-right-to-bracket"></i>
+                Login
+            </button>
+
+        </form>
+
+        <!-- REGISTRATION OPTION -->
+        <div class="register-link">
+            <p>Don't have an account?</p>
+
+            <a href="register.html" class="register-button">
+                <i class="fa-solid fa-user-plus"></i>
+                Create an Account
+            </a>
+        </div>
+
+        <!-- LOGIN / REGISTRATION MESSAGES -->
+        <p
+            id="loginMessage"
+            class="login-message"
+            aria-live="polite"
+            role="status"
+        ></p>
+
+        <!-- PATIENT PORTAL LINK -->
+        <div class="portal-help">
+            <p>Want to view your hospital information directly?</p>
+
+            <a href="patient-portal.html">
+                <i class="fa-solid fa-arrow-right"></i>
+                Open Patient Portal
+            </a>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <div class="footer-content">
+
+        <div class="footer-brand">
+            <h2>
+                <i class="fa-solid fa-heart-pulse"></i>
+                MediCare<span>+</span>
+            </h2>
+
+            <p>
+                Integrated Hospital and Pharmacy Management System
+                for convenient and efficient healthcare services.
+            </p>
+        </div>
+
+        <div class="footer-links">
+            <h3>Quick Links</h3>
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="doctors.html">Doctors</a>
+            <a href="appointment.html">Appointments</a>
+        </div>
+
+        <div class="footer-links">
+            <h3>Services</h3>
+            <a href="departments.html">Departments</a>
+            <a href="pharmacy.html">Pharmacy</a>
+            <a href="laboratory.html">Laboratory</a>
+            <a href="emergency.html">Emergency</a>
+        </div>
+
+        <div class="footer-contact">
+            <h3>Contact</h3>
+
+            <p>
+                <i class="fa-solid fa-phone"></i>
+                +91 98765 43210
+            </p>
+
+            <p>
+                <i class="fa-solid fa-envelope"></i>
+                support@medicareplus.com
+            </p>
+
+            <p>
+                <i class="fa-solid fa-location-dot"></i>
+                Ahmedabad, Gujarat
+            </p>
+        </div>
+
+    </div>
+
+    <div class="copyright">
+        © 2026 MediCare+. All Rights Reserved.
+    </div>
+</footer>
+
+<!-- WEBSITE JAVASCRIPT -->
+<script src="js/script.js"></script>
+
+<script>
+    const forgotPassword =
+        document.getElementById("forgotPassword");
+
+    const loginMessage =
+        document.getElementById("loginMessage");
+
+    // Display registration success message
+    const params = new URLSearchParams(window.location.search);
+
+    if (params.get("registered") === "success") {
+        loginMessage.textContent =
+            "Registration successful! Please log in with your mobile number and password.";
+
+        loginMessage.className =
+            "login-message success-message";
+
+        // Remove the query parameter from the address bar
+        window.history.replaceState(
+            {},
+            document.title,
+            window.location.pathname
+        );
+    }
+
+    // Forgot password message
+    forgotPassword.addEventListener("click", function(event) {
+        event.preventDefault();
+
+        loginMessage.textContent =
+            "Password reset is not configured yet. Please contact MediCare+ support.";
+
+        loginMessage.className = "login-message";
+    });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,1023 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Pharmacy | MediCare+</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+<body>
+
+
+<!-- ================= TOP BAR ================= -->
+
+<div class="top-bar">
+
+    <div class="top-left">
+
+        <span>
+            <i class="fa-solid fa-phone"></i>
+            Emergency: +91 98765 43210
+        </span>
+
+        <span>
+            <i class="fa-solid fa-envelope"></i>
+            support@medicareplus.com
+        </span>
+
+    </div>
+
+    <div class="top-right">
+
+        <span>
+            <i class="fa-solid fa-clock"></i>
+            24/7 Healthcare Services
+        </span>
+
+    </div>
+
+</div>
+
+
+<!-- ================= NAVIGATION ================= -->
+
+<header class="navbar">
+
+
+    <div class="logo">
+
+        <div class="logo-icon">
+
+            <i class="fa-solid fa-heart-pulse"></i>
+
+        </div>
+
+        <div>
+
+            <h2>
+                MediCare<span>+</span>
+            </h2>
+
+            <small>
+                Hospital & Pharmacy
+            </small>
+
+        </div>
+
+    </div>
+
+
+    <nav id="navMenu">
+
+        <a href="index.html">
+            <i class="fa-solid fa-house"></i>
+            Home
+        </a>
+
+        <a href="about.html">
+            About Us
+        </a>
+
+        <a href="departments.html">
+            Departments
+        </a>
+
+        <a href="doctors.html">
+            Doctors
+        </a>
+
+        <a href="appointment.html">
+            Appointments
+        </a>
+
+        <a href="pharmacy.html" class="active">
+            Pharmacy
+        </a>
+
+         <a href="laboratory.html">
+    Laboratory
+</a>
+
+       
+
+        <a href="contact.html">
+            Contact
+        </a>
+
+    </nav>
+
+
+    <div class="nav-actions">
+
+        <a href="login.html" class="login-btn">
+
+            <i class="fa-solid fa-user"></i>
+
+            Login
+
+        </a>
+
+        <a href="appointment.html"
+           class="appointment-btn">
+
+            Book Appointment
+
+        </a>
+
+    </div>
+
+
+    <button class="menu-btn" id="menuBtn">
+
+        <i class="fa-solid fa-bars"></i>
+
+    </button>
+
+</header>
+
+
+<!-- ================= PAGE HERO ================= -->
+
+<section class="page-hero pharmacy-hero">
+
+    <div>
+
+        <span class="section-tag">
+            MEDICARE+ PHARMACY
+        </span>
+
+        <h1>
+            Online Pharmacy
+        </h1>
+
+        <p>
+            Find essential medicines and healthcare
+            products conveniently through our pharmacy service.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- ================= PHARMACY ================= -->
+
+<section class="pharmacy-page">
+
+
+    <!-- HEADING -->
+
+    <div class="section-heading">
+
+        <span class="section-tag">
+            MEDICINES
+        </span>
+
+        <h2>
+            Browse Our Pharmacy
+        </h2>
+
+        <p>
+            Search and explore medicines available through
+            the MediCare+ pharmacy.
+        </p>
+
+    </div>
+
+
+    <!-- SEARCH AND CART -->
+
+    <div class="pharmacy-toolbar">
+
+
+        <div class="medicine-search">
+
+            <i class="fa-solid fa-magnifying-glass"></i>
+
+            <input
+                type="text"
+                id="medicineSearch"
+                placeholder="Search medicines..."
+            >
+
+        </div>
+
+
+        <button class="cart-button"
+                id="cartButton">
+
+            <i class="fa-solid fa-cart-shopping"></i>
+
+            Cart
+
+            <span id="cartCount">
+                0
+            </span>
+
+        </button>
+
+    </div>
+
+
+    <!-- CATEGORIES -->
+
+    <div class="medicine-categories">
+
+        <button class="category-btn active"
+                data-category="all">
+
+            All Medicines
+
+        </button>
+
+        <button class="category-btn"
+                data-category="pain">
+
+            Pain Relief
+
+        </button>
+
+        <button class="category-btn"
+                data-category="cold">
+
+            Cold & Fever
+
+        </button>
+
+        <button class="category-btn"
+                data-category="vitamins">
+
+            Vitamins
+
+        </button>
+
+        <button class="category-btn"
+                data-category="digestive">
+
+            Digestive Care
+
+        </button>
+
+    </div>
+
+
+    <!-- MEDICINE GRID -->
+
+    <div class="medicine-grid"
+         id="medicineGrid">
+
+
+        <!-- 1 -->
+
+        <div class="medicine-card"
+             data-category="pain"
+             data-name="Paracetamol 500mg">
+
+            <div class="medicine-image">
+
+                <i class="fa-solid fa-pills"></i>
+
+                <span class="stock-badge">
+                    In Stock
+                </span>
+
+            </div>
+
+            <div class="medicine-content">
+
+                <span class="medicine-category">
+                    Pain Relief
+                </span>
+
+                <h3>
+                    Paracetamol 500mg
+                </h3>
+
+                <p>
+                    Commonly used for temporary relief
+                    from pain and fever.
+                </p>
+
+                <div class="medicine-bottom">
+
+                    <strong>
+                        ₹35
+                    </strong>
+
+                    <button class="add-cart"
+                            data-name="Paracetamol 500mg"
+                            data-price="35">
+
+                        <i class="fa-solid fa-cart-plus"></i>
+
+                        Add to Cart
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- 2 -->
+
+        <div class="medicine-card"
+             data-category="pain"
+             data-name="Ibuprofen 400mg">
+
+            <div class="medicine-image">
+
+                <i class="fa-solid fa-capsules"></i>
+
+                <span class="stock-badge">
+                    In Stock
+                </span>
+
+            </div>
+
+            <div class="medicine-content">
+
+                <span class="medicine-category">
+                    Pain Relief
+                </span>
+
+                <h3>
+                    Ibuprofen 400mg
+                </h3>
+
+                <p>
+                    Medicine commonly used for temporary
+                    pain and inflammation relief.
+                </p>
+
+                <div class="medicine-bottom">
+
+                    <strong>
+                        ₹48
+                    </strong>
+
+                    <button class="add-cart"
+                            data-name="Ibuprofen 400mg"
+                            data-price="48">
+
+                        <i class="fa-solid fa-cart-plus"></i>
+
+                        Add to Cart
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- 3 -->
+
+        <div class="medicine-card"
+             data-category="cold"
+             data-name="Cold Relief Tablets">
+
+            <div class="medicine-image">
+
+                <i class="fa-solid fa-tablets"></i>
+
+                <span class="stock-badge">
+                    In Stock
+                </span>
+
+            </div>
+
+            <div class="medicine-content">
+
+                <span class="medicine-category">
+                    Cold & Fever
+                </span>
+
+                <h3>
+                    Cold Relief Tablets
+                </h3>
+
+                <p>
+                    Helps provide temporary relief from
+                    common cold symptoms.
+                </p>
+
+                <div class="medicine-bottom">
+
+                    <strong>
+                        ₹60
+                    </strong>
+
+                    <button class="add-cart"
+                            data-name="Cold Relief Tablets"
+                            data-price="60">
+
+                        <i class="fa-solid fa-cart-plus"></i>
+
+                        Add to Cart
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- 4 -->
+
+        <div class="medicine-card"
+             data-category="cold"
+             data-name="Fever Relief Tablets">
+
+            <div class="medicine-image">
+
+                <i class="fa-solid fa-prescription-bottle"></i>
+
+                <span class="stock-badge">
+                    In Stock
+                </span>
+
+            </div>
+
+            <div class="medicine-content">
+
+                <span class="medicine-category">
+                    Cold & Fever
+                </span>
+
+                <h3>
+                    Fever Relief Tablets
+                </h3>
+
+                <p>
+                    Provides temporary relief from
+                    fever symptoms.
+                </p>
+
+                <div class="medicine-bottom">
+
+                    <strong>
+                        ₹42
+                    </strong>
+
+                    <button class="add-cart"
+                            data-name="Fever Relief Tablets"
+                            data-price="42">
+
+                        <i class="fa-solid fa-cart-plus"></i>
+
+                        Add to Cart
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- 5 -->
+
+        <div class="medicine-card"
+             data-category="vitamins"
+             data-name="Vitamin C Tablets">
+
+            <div class="medicine-image">
+
+                <i class="fa-solid fa-lemon"></i>
+
+                <span class="stock-badge">
+                    In Stock
+                </span>
+
+            </div>
+
+            <div class="medicine-content">
+
+                <span class="medicine-category">
+                    Vitamins
+                </span>
+
+                <h3>
+                    Vitamin C Tablets
+                </h3>
+
+                <p>
+                    Vitamin supplement for supporting
+                    normal nutritional needs.
+                </p>
+
+                <div class="medicine-bottom">
+
+                    <strong>
+                        ₹120
+                    </strong>
+
+                    <button class="add-cart"
+                            data-name="Vitamin C Tablets"
+                            data-price="120">
+
+                        <i class="fa-solid fa-cart-plus"></i>
+
+                        Add to Cart
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- 6 -->
+
+        <div class="medicine-card"
+             data-category="vitamins"
+             data-name="Multivitamin Tablets">
+
+            <div class="medicine-image">
+
+                <i class="fa-solid fa-capsules"></i>
+
+                <span class="stock-badge">
+                    In Stock
+                </span>
+
+            </div>
+
+            <div class="medicine-content">
+
+                <span class="medicine-category">
+                    Vitamins
+                </span>
+
+                <h3>
+                    Multivitamin Tablets
+                </h3>
+
+                <p>
+                    Nutritional supplement containing
+                    multiple vitamins.
+                </p>
+
+                <div class="medicine-bottom">
+
+                    <strong>
+                        ₹180
+                    </strong>
+
+                    <button class="add-cart"
+                            data-name="Multivitamin Tablets"
+                            data-price="180">
+
+                        <i class="fa-solid fa-cart-plus"></i>
+
+                        Add to Cart
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- 7 -->
+
+        <div class="medicine-card"
+             data-category="digestive"
+             data-name="Antacid Tablets">
+
+            <div class="medicine-image">
+
+                <i class="fa-solid fa-pills"></i>
+
+                <span class="stock-badge">
+                    In Stock
+                </span>
+
+            </div>
+
+            <div class="medicine-content">
+
+                <span class="medicine-category">
+                    Digestive Care
+                </span>
+
+                <h3>
+                    Antacid Tablets
+                </h3>
+
+                <p>
+                    Used for temporary relief of
+                    occasional acidity symptoms.
+                </p>
+
+                <div class="medicine-bottom">
+
+                    <strong>
+                        ₹55
+                    </strong>
+
+                    <button class="add-cart"
+                            data-name="Antacid Tablets"
+                            data-price="55">
+
+                        <i class="fa-solid fa-cart-plus"></i>
+
+                        Add to Cart
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- 8 -->
+
+        <div class="medicine-card"
+             data-category="digestive"
+             data-name="Digestive Care Syrup">
+
+            <div class="medicine-image">
+
+                <i class="fa-solid fa-prescription-bottle"></i>
+
+                <span class="stock-badge">
+                    In Stock
+                </span>
+
+            </div>
+
+            <div class="medicine-content">
+
+                <span class="medicine-category">
+                    Digestive Care
+                </span>
+
+                <h3>
+                    Digestive Care Syrup
+                </h3>
+
+                <p>
+                    Healthcare product intended to support
+                    normal digestive comfort.
+                </p>
+
+                <div class="medicine-bottom">
+
+                    <strong>
+                        ₹95
+                    </strong>
+
+                    <button class="add-cart"
+                            data-name="Digestive Care Syrup"
+                            data-price="95">
+
+                        <i class="fa-solid fa-cart-plus"></i>
+
+                        Add to Cart
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- ================= CART MODAL ================= -->
+
+<div class="cart-modal"
+     id="cartModal">
+
+
+    <div class="cart-overlay"
+         id="cartOverlay">
+    </div>
+
+
+    <div class="cart-box">
+
+
+        <div class="cart-header">
+
+            <h2>
+                <i class="fa-solid fa-cart-shopping"></i>
+                Your Cart
+            </h2>
+
+            <button id="closeCart"
+                    class="close-cart">
+
+                <i class="fa-solid fa-xmark"></i>
+
+            </button>
+
+        </div>
+
+
+        <div class="cart-items"
+             id="cartItems">
+
+            <!-- Items appear here using JavaScript -->
+
+        </div>
+
+
+        <div class="cart-empty"
+             id="cartEmpty">
+
+            <i class="fa-solid fa-cart-shopping"></i>
+
+            <h3>
+                Your cart is empty
+            </h3>
+
+            <p>
+                Add medicines to your cart to continue.
+            </p>
+
+        </div>
+
+
+        <div class="cart-footer"
+             id="cartFooter">
+
+
+            <div class="cart-total">
+
+                <span>
+                    Total
+                </span>
+
+                <strong id="cartTotal">
+                    ₹0
+                </strong>
+
+            </div>
+
+
+            <div class="cart-actions">
+
+                <button id="clearCart"
+                        class="clear-cart">
+
+                    Clear Cart
+
+                </button>
+
+                <button id="checkoutButton"
+                        class="checkout-button">
+
+                    Proceed to Order
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- ================= PHARMACY INFORMATION ================= -->
+
+<section class="pharmacy-info-section">
+
+    <div class="pharmacy-info-container">
+
+
+        <div class="pharmacy-info-card">
+
+            <i class="fa-solid fa-shield-halved"></i>
+
+            <h3>
+                Trusted Pharmacy
+            </h3>
+
+            <p>
+                Medicines and healthcare products are
+                provided through our pharmacy service.
+            </p>
+
+        </div>
+
+
+        <div class="pharmacy-info-card">
+
+            <i class="fa-solid fa-truck-fast"></i>
+
+            <h3>
+                Convenient Ordering
+            </h3>
+
+            <p>
+                Browse available products and add them
+                to your cart conveniently.
+            </p>
+
+        </div>
+
+
+        <div class="pharmacy-info-card">
+
+            <i class="fa-solid fa-user-doctor"></i>
+
+            <h3>
+                Professional Support
+            </h3>
+
+            <p>
+                Consult a qualified healthcare professional
+                when medical advice is required.
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- ================= CTA ================= -->
+
+<section class="cta">
+
+    <div>
+
+        <span>
+            NEED MEDICAL ADVICE?
+        </span>
+
+        <h2>
+            Talk to Our Healthcare Team
+        </h2>
+
+        <p>
+            Book an appointment with one of our doctors
+            for professional medical guidance.
+        </p>
+
+    </div>
+
+    <a href="appointment.html"
+       class="appointment-btn">
+
+        Book Appointment
+
+    </a>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <div class="footer-content">
+
+
+        <div class="footer-brand">
+
+            <h2>
+
+                <i class="fa-solid fa-heart-pulse"></i>
+
+                MediCare<span>+</span>
+
+            </h2>
+
+            <p>
+                Integrated Hospital and Pharmacy Management
+                System for convenient and efficient healthcare
+                services.
+            </p>
+
+        </div>
+
+
+        <div class="footer-links">
+
+            <h3>
+                Quick Links
+            </h3>
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="about.html">
+                About Us
+            </a>
+
+            <a href="doctors.html">
+                Doctors
+            </a>
+
+            <a href="appointment.html">
+                Appointments
+            </a>
+
+        </div>
+
+
+        <div class="footer-links">
+
+            <h3>
+                Services
+            </h3>
+
+            <a href="departments.html">
+                Departments
+            </a>
+
+            <a href="pharmacy.html">
+                Pharmacy
+            </a>
+
+            <a href="laboratory.html">
+                Laboratory
+            </a>
+
+            <a href="emergency.html">
+                Emergency
+            </a>
+
+        </div>
+
+
+        <div class="footer-contact">
+
+            <h3>
+                Contact
+            </h3>
+
+            <p>
+                <i class="fa-solid fa-phone"></i>
+                +91 98765 43210
+            </p>
+
+            <p>
+                <i class="fa-solid fa-envelope"></i>
+                support@medicareplus.com
+            </p>
+
+            <p>
+                <i class="fa-solid fa-location-dot"></i>
+                Ahmedabad, Gujarat
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="copyright">
+
+        © 2026 MediCare+. All Rights Reserved.
+
+    </div>
+
+</footer>
+
+
+<!-- MAIN JAVASCRIPT -->
+
+
+<script src="js/script.js"></script>
+</body>
+
+</html>

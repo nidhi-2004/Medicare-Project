@@ -1,0 +1,20 @@
+<?php
+require_once __DIR__ . '/helpers.php'; admin_start('Medicines');
+$medicineTable=table_exists($conn,'pharmacy_products')?'pharmacy_products':(table_exists($conn,'medicines')?'medicines':null);
+if(!$medicineTable){flash_message('No medicines table was found. Import database_backend_setup.sql.',true);admin_end();exit;}
+$cols=columns_for($conn,$medicineTable);$message='';
+if($_SERVER['REQUEST_METHOD']==='POST'){
+ $action=$_POST['action']??'';
+ if($action==='save' && in_array('name',$cols,true)&&in_array('price',$cols,true)&&in_array('stock',$cols,true)){
+  $id=(int)($_POST['id']??0);$name=trim($_POST['name']??'');$price=(float)($_POST['price']??0);$stock=(int)($_POST['stock']??0);
+  if($name===''||$price<0||$stock<0)$message='Enter a valid name, price and stock.';
+  elseif($id>0){$st=$conn->prepare("UPDATE `$medicineTable` SET name=?, price=?, stock=? WHERE id=?");$st->bind_param('sdii',$name,$price,$stock,$id);$message=$st->execute()?'Medicine updated.':'Could not update medicine.';$st->close();}
+  else{$st=$conn->prepare("INSERT INTO `$medicineTable` (name,price,stock) VALUES (?,?,?)");$st->bind_param('sdi',$name,$price,$stock);$message=$st->execute()?'Medicine added.':'Could not add medicine (it may already exist).';$st->close();}
+ } elseif($action==='delete'&&in_array('id',$cols,true)){$id=(int)($_POST['id']??0);$st=$conn->prepare("DELETE FROM `$medicineTable` WHERE id=?");$st->bind_param('i',$id);$message=$st->execute()?'Medicine deleted.':'Could not delete medicine.';$st->close();}
+}
+$edit=null;if(isset($_GET['edit'])){$id=(int)$_GET['edit'];$st=$conn->prepare("SELECT * FROM `$medicineTable` WHERE id=?");$st->bind_param('i',$id);$st->execute();$edit=$st->get_result()->fetch_assoc();$st->close();}
+$rows=fetch_all_rows($conn,"SELECT * FROM `$medicineTable` ORDER BY id DESC");
+?>
+<section class="panel"><h1>Manage Medicines</h1><p class="muted">Inventory table: <?=h($medicineTable)?>. This is the stock source used by pharmacy orders.</p><?php if($message) flash_message($message, str_contains(strtolower($message),'could not') || str_contains(strtolower($message),'enter')); ?>
+<?php if(in_array('name',$cols,true)&&in_array('price',$cols,true)&&in_array('stock',$cols,true)):?><form method="post" class="formgrid"><input type="hidden" name="action" value="save"><input type="hidden" name="id" value="<?=h($edit['id']??0)?>"><label>Medicine name<input name="name" required value="<?=h($edit['name']??'')?>"></label><label>Price (₹)<input type="number" name="price" min="0" step="0.01" required value="<?=h($edit['price']??'')?>"></label><label>Stock quantity<input type="number" name="stock" min="0" required value="<?=h($edit['stock']??'')?>"></label><div style="align-self:end"><button class="btn"><?= $edit?'Update Medicine':'Add Medicine' ?></button><?php if($edit):?> <a class="btn" href="medicines.php">Cancel</a><?php endif;?></div></form><?php else:?> <p class="muted">To edit medicines, the table must have name, price and stock columns. Current columns: <?=h(implode(', ',$cols))?></p><?php endif;?></section>
+<section class="panel"><h2>Medicine Inventory</h2><?php if(!$rows):?><p>No medicines found.</p><?php else:?><div class="tablewrap"><table><thead><tr><?php foreach($cols as $c)echo '<th>'.h(ucwords(str_replace('_',' ',$c))).'</th>';?><th>Actions</th></tr></thead><tbody><?php foreach($rows as $r):?><tr><?php foreach($cols as $c)echo '<td>'.h($r[$c]??'').'</td>';?><td class="actions"><a class="btn" href="?edit=<?= (int)$r['id']?>">Edit</a><form method="post" onsubmit="return confirm('Delete this medicine?');"><input type="hidden" name="action" value="delete"><input type="hidden" name="id" value="<?= (int)$r['id']?>"><button class="btn danger">Delete</button></form></td></tr><?php endforeach;?></tbody></table></div><?php endif;?></section><?php admin_end();?>

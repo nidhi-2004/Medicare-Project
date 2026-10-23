@@ -1,0 +1,430 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | MediCare+</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+
+<!-- TOP BAR -->
+<div class="top-bar">
+    <div class="top-left">
+        <span>
+            <i class="fa-solid fa-phone"></i>
+            Emergency: +91 98765 43210
+        </span>
+        <span>
+            <i class="fa-solid fa-envelope"></i>
+            support@medicareplus.com
+        </span>
+    </div>
+
+    <div class="top-right">
+        <span>
+            <i class="fa-solid fa-clock"></i>
+            24/7 Healthcare Services
+        </span>
+    </div>
+</div>
+
+<!-- NAVIGATION -->
+<header class="navbar">
+    <div class="logo">
+        <div class="logo-icon">
+            <i class="fa-solid fa-heart-pulse"></i>
+        </div>
+        <div>
+            <h2>MediCare<span>+</span></h2>
+            <small>Hospital & Pharmacy</small>
+        </div>
+    </div>
+
+    <nav id="navMenu">
+        <a href="index.html">
+            <i class="fa-solid fa-house"></i> Home
+        </a>
+        <a href="about.html">About Us</a>
+        <a href="departments.html">Departments</a>
+        <a href="doctors.html">Doctors</a>
+        <a href="appointment.html">Appointments</a>
+        <a href="pharmacy.html">Pharmacy</a>
+        <a href="laboratory.html">Laboratory</a>
+        <a href="contact.html" class="active">Contact</a>
+    </nav>
+
+    <div class="nav-actions">
+        <a href="login.html" class="login-btn">
+            <i class="fa-solid fa-user"></i> Login
+        </a>
+        <a href="appointment.html" class="appointment-btn">
+            Book Appointment
+        </a>
+    </div>
+
+    <button class="menu-btn" id="menuBtn" type="button">
+        <i class="fa-solid fa-bars"></i>
+    </button>
+</header>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+    <div>
+        <span class="section-tag">CONTACT US</span>
+        <h1>We're Here to Help</h1>
+        <p>
+            Contact MediCare+ for appointments, healthcare
+            services, pharmacy support and general assistance.
+        </p>
+    </div>
+</section>
+
+<!-- CONTACT SECTION -->
+<section class="contact-page">
+    <div class="contact-container">
+
+        <!-- CONTACT INFORMATION -->
+        <div class="contact-info">
+            <span class="section-tag">GET IN TOUCH</span>
+            <h2>Contact MediCare+</h2>
+            <p>
+                Our support team is available to help you with
+                appointments, patient services and other
+                healthcare-related questions.
+            </p>
+
+            <div class="contact-info-box">
+                <div class="contact-icon">
+                    <i class="fa-solid fa-phone"></i>
+                </div>
+                <div>
+                    <h3>Phone</h3>
+                    <p>+91 98765 43210</p>
+                    <span>Available 24/7</span>
+                </div>
+            </div>
+
+            <div class="contact-info-box">
+                <div class="contact-icon">
+                    <i class="fa-solid fa-envelope"></i>
+                </div>
+                <div>
+                    <h3>Email</h3>
+                    <p>support@medicareplus.com</p>
+                    <span>We will reply as soon as possible</span>
+                </div>
+            </div>
+
+            <div class="contact-info-box">
+                <div class="contact-icon">
+                    <i class="fa-solid fa-location-dot"></i>
+                </div>
+                <div>
+                    <h3>Hospital Address</h3>
+                    <p>MediCare+ Hospital</p>
+                    <span>Ahmedabad, Gujarat, India</span>
+                </div>
+            </div>
+
+            <div class="contact-info-box">
+                <div class="contact-icon">
+                    <i class="fa-solid fa-clock"></i>
+                </div>
+                <div>
+                    <h3>Working Hours</h3>
+                    <p>Hospital Services: 24/7</p>
+                    <span>OPD: 9:00 AM - 6:00 PM</span>
+                </div>
+            </div>
+
+            <div class="emergency-box">
+                <div class="emergency-icon">
+                    <i class="fa-solid fa-truck-medical"></i>
+                </div>
+                <div>
+                    <h3>Medical Emergency?</h3>
+                    <p>
+                        For urgent medical assistance,
+                        contact our emergency department.
+                    </p>
+                    <a href="tel:+919876543210">
+                        <i class="fa-solid fa-phone"></i>
+                        +91 98765 43210
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- CONTACT FORM -->
+        <div class="contact-form-container">
+            <div class="form-heading">
+                <h2>Send Us a Message</h2>
+                <p>Fill in the form and our team will contact you.</p>
+            </div>
+
+            <form id="contactForm"
+                  action="save_contact.php"
+                  method="POST">
+
+                <!-- NAME -->
+                <div class="form-group">
+                    <label for="contactName">Full Name</label>
+                    <div class="input-box">
+                        <i class="fa-solid fa-user"></i>
+                        <input
+                            type="text"
+                            id="contactName"
+                            name="name"
+                            placeholder="Enter your full name"
+                            required
+                        >
+                    </div>
+                </div>
+
+                <!-- EMAIL -->
+                <div class="form-group">
+                    <label for="contactEmail">Email Address</label>
+                    <div class="input-box">
+                        <i class="fa-solid fa-envelope"></i>
+                        <input
+                            type="email"
+                            id="contactEmail"
+                            name="email"
+                            placeholder="Enter your email"
+                            required
+                        >
+                    </div>
+                </div>
+
+                <!-- PHONE -->
+                <div class="form-group">
+                    <label for="contactPhone">Phone Number</label>
+                    <div class="input-box">
+                        <i class="fa-solid fa-phone"></i>
+                        <input
+                            type="tel"
+                            id="contactPhone"
+                            name="phone"
+                            placeholder="Enter your phone number"
+                            maxlength="10"
+                            pattern="[0-9]{10}"
+                            title="Enter a 10-digit phone number"
+                            required
+                        >
+                    </div>
+                </div>
+
+                <!-- SUBJECT -->
+                <div class="form-group">
+                    <label for="contactSubject">Subject</label>
+                    <div class="input-box">
+                        <i class="fa-solid fa-heading"></i>
+                        <input
+                            type="text"
+                            id="contactSubject"
+                            name="subject"
+                            placeholder="Enter message subject"
+                            required
+                        >
+                    </div>
+                </div>
+
+                <!-- MESSAGE -->
+                <div class="form-group">
+                    <label for="contactMessage">Message</label>
+                    <div class="input-box">
+                        <i class="fa-solid fa-message"></i>
+                        <textarea
+                            id="contactMessage"
+                            name="message"
+                            rows="5"
+                            placeholder="Write your message here..."
+                            required
+                        ></textarea>
+                    </div>
+                </div>
+
+                <!-- SUBMIT -->
+                <button type="submit" class="submit-appointment">
+                    <i class="fa-solid fa-paper-plane"></i>
+                    Send Message
+                </button>
+
+                <p class="form-note">
+                    <i class="fa-solid fa-shield-halved"></i>
+                    Your information will be kept secure.
+                </p>
+            </form>
+
+            <!-- SUCCESS MESSAGE -->
+            <div id="contactSuccess" class="appointment-success">
+                <div class="success-icon">
+                    <i class="fa-solid fa-check"></i>
+                </div>
+                <h3>Message Sent Successfully!</h3>
+                <p>
+                    Thank you for contacting MediCare+.
+                    Our support team will contact you soon.
+                </p>
+                <a href="index.html">Back to Home</a>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- QUICK CONTACT SERVICES -->
+<section class="quick-services">
+
+    <div class="service-card">
+        <div class="service-icon">
+            <i class="fa-solid fa-calendar-check"></i>
+        </div>
+        <div>
+            <h3>Book Appointment</h3>
+            <p>Schedule your hospital visit</p>
+        </div>
+        <a href="appointment.html">
+            <i class="fa-solid fa-arrow-right"></i>
+        </a>
+    </div>
+
+    <div class="service-card">
+        <div class="service-icon">
+            <i class="fa-solid fa-user-doctor"></i>
+        </div>
+        <div>
+            <h3>Find a Doctor</h3>
+            <p>Choose a doctor by specialty</p>
+        </div>
+        <a href="doctors.html">
+            <i class="fa-solid fa-arrow-right"></i>
+        </a>
+    </div>
+
+    <div class="service-card">
+        <div class="service-icon">
+            <i class="fa-solid fa-pills"></i>
+        </div>
+        <div>
+            <h3>Online Pharmacy</h3>
+            <p>Order medicines online</p>
+        </div>
+        <a href="pharmacy.html">
+            <i class="fa-solid fa-arrow-right"></i>
+        </a>
+    </div>
+
+    <div class="service-card emergency">
+        <div class="service-icon">
+            <i class="fa-solid fa-truck-medical"></i>
+        </div>
+        <div>
+            <h3>Emergency Care</h3>
+            <p>Get immediate medical assistance</p>
+        </div>
+        <a href="emergency.html">
+            <i class="fa-solid fa-arrow-right"></i>
+        </a>
+    </div>
+
+</section>
+
+<!-- CALL TO ACTION -->
+<section class="cta">
+    <div>
+        <span>NEED MEDICAL ASSISTANCE?</span>
+        <h2>We're Ready to Help You</h2>
+        <p>Book an appointment or contact our support team.</p>
+    </div>
+    <a href="appointment.html" class="appointment-btn">
+        Book Appointment
+    </a>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <div class="footer-content">
+
+        <div class="footer-brand">
+            <h2>
+                <i class="fa-solid fa-heart-pulse"></i>
+                MediCare<span>+</span>
+            </h2>
+            <p>
+                Integrated Hospital and Pharmacy Management
+                System for convenient and efficient healthcare
+                services.
+            </p>
+        </div>
+
+        <div class="footer-links">
+            <h3>Quick Links</h3>
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="doctors.html">Doctors</a>
+            <a href="appointment.html">Appointments</a>
+        </div>
+
+        <div class="footer-links">
+            <h3>Services</h3>
+            <a href="departments.html">Departments</a>
+            <a href="pharmacy.html">Pharmacy</a>
+            <a href="laboratory.html">Laboratory</a>
+            <a href="emergency.html">Emergency</a>
+        </div>
+
+        <div class="footer-contact">
+            <h3>Contact</h3>
+            <p>
+                <i class="fa-solid fa-phone"></i>
+                +91 98765 43210
+            </p>
+            <p>
+                <i class="fa-solid fa-envelope"></i>
+                support@medicareplus.com
+            </p>
+            <p>
+                <i class="fa-solid fa-location-dot"></i>
+                Ahmedabad, Gujarat
+            </p>
+        </div>
+
+    </div>
+
+    <div class="copyright">
+        © 2026 MediCare+. All Rights Reserved.
+    </div>
+</footer>
+
+<!-- JAVASCRIPT -->
+
+
+<script src="js/script.js"></script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const params = new URLSearchParams(window.location.search);
+
+    if (params.get("sent") === "1") {
+        const form = document.getElementById("contactForm");
+        const success = document.getElementById("contactSuccess");
+
+        if (form && success) {
+            form.style.display = "none";
+            success.style.display = "block";
+            success.scrollIntoView({ behavior: "smooth", block: "center" });
+        }
+    }
+});
+</script>
+</body>
+</html>
+
+

@@ -1,0 +1,845 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Book Appointment | MediCare+</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+
+<!-- ================= TOP BAR ================= -->
+
+<div class="top-bar">
+
+    <div class="top-left">
+
+        <span>
+            <i class="fa-solid fa-phone"></i>
+            Emergency: +91 98765 43210
+        </span>
+
+        <span>
+            <i class="fa-solid fa-envelope"></i>
+            support@medicareplus.com
+        </span>
+
+    </div>
+
+    <div class="top-right">
+
+        <span>
+            <i class="fa-solid fa-clock"></i>
+            24/7 Healthcare Services
+        </span>
+
+    </div>
+
+</div>
+
+
+<!-- ================= NAVIGATION ================= -->
+
+<header class="navbar">
+
+    <div class="logo">
+
+        <div class="logo-icon">
+            <i class="fa-solid fa-heart-pulse"></i>
+        </div>
+
+        <div>
+            <h2>MediCare<span>+</span></h2>
+            <small>Hospital & Pharmacy</small>
+        </div>
+
+    </div>
+
+
+    <nav id="navMenu">
+
+        <a href="index.html">
+            <i class="fa-solid fa-house"></i>
+            Home
+        </a>
+
+        <a href="about.html">
+            About Us
+        </a>
+
+        <a href="departments.html">
+            Departments
+        </a>
+
+        <a href="doctors.html">
+            Doctors
+        </a>
+
+        <a href="appointment.html" class="active">
+            Appointments
+        </a>
+
+        <a href="pharmacy.html">
+            Pharmacy
+        </a>
+
+        <a href="laboratory.html">
+            Laboratory
+        </a>
+
+
+        <a href="contact.html">
+            Contact
+        </a>
+
+    </nav>
+
+
+    <div class="nav-actions">
+
+        <a href="login.html" class="login-btn">
+            <i class="fa-solid fa-user"></i>
+            Login
+        </a>
+
+        <a href="appointment.html" class="appointment-btn">
+            Book Appointment
+        </a>
+
+    </div>
+
+
+    <button class="menu-btn" id="menuBtn">
+        <i class="fa-solid fa-bars"></i>
+    </button>
+
+</header>
+
+
+<!-- ================= PAGE HERO ================= -->
+
+<section class="page-hero appointment-hero">
+
+    <div>
+
+        <span class="section-tag">
+            APPOINTMENT
+        </span>
+
+        <h1>
+            Book Your Appointment
+        </h1>
+
+        <p>
+            Schedule an appointment with our experienced
+            healthcare professionals at a convenient time.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- ================= APPOINTMENT SECTION ================= -->
+
+<section class="appointment-page">
+
+    <div class="appointment-container">
+
+
+        <!-- ================= LEFT INFORMATION ================= -->
+
+        <div class="appointment-info">
+
+            <span class="section-tag">
+                EASY & CONVENIENT
+            </span>
+
+            <h2>
+                Get the Care You Need
+            </h2>
+
+            <p>
+                Fill out the appointment form and our team
+                will help you schedule your visit with the
+                appropriate doctor.
+            </p>
+
+
+            <div class="appointment-info-box">
+
+                <div class="info-icon">
+                    <i class="fa-solid fa-user-doctor"></i>
+                </div>
+
+                <div>
+                    <h3>
+                        Experienced Doctors
+                    </h3>
+
+                    <p>
+                        Consult qualified healthcare
+                        professionals across multiple
+                        medical departments.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="appointment-info-box">
+
+                <div class="info-icon">
+                    <i class="fa-solid fa-calendar-check"></i>
+                </div>
+
+                <div>
+                    <h3>
+                        Easy Appointment Booking
+                    </h3>
+
+                    <p>
+                        Choose your department, doctor,
+                        date and preferred appointment time.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="appointment-info-box">
+
+                <div class="info-icon">
+                    <i class="fa-solid fa-clock"></i>
+                </div>
+
+                <div>
+                    <h3>
+                        Flexible Timings
+                    </h3>
+
+                    <p>
+                        Select an available time according
+                        to your healthcare needs.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <!-- EMERGENCY -->
+
+            <div class="emergency-box">
+
+                <div class="emergency-icon">
+                    <i class="fa-solid fa-truck-medical"></i>
+                </div>
+
+                <div>
+
+                    <h3>
+                        Emergency?
+                    </h3>
+
+                    <p>
+                        For urgent medical assistance,
+                        contact our emergency department.
+                    </p>
+
+                    <a href="tel:+919876543210">
+                        <i class="fa-solid fa-phone"></i>
+                        +91 98765 43210
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- ================= FORM CONTAINER ================= -->
+
+        <div class="appointment-form-container">
+
+            <div class="form-heading">
+
+                <h2>
+                    Appointment Details
+                </h2>
+
+                <p>
+                    Please provide the required information.
+                </p>
+
+            </div>
+
+
+            <!-- IMPORTANT:
+                 Form starts here and closes at the bottom.
+                 PHP backend can be connected later.
+            -->
+
+           
+<form id="appointmentForm" action="appointment.php" method="POST">
+
+
+
+                <!-- FULL NAME -->
+
+                <div class="form-group">
+
+                    <label for="patientName">
+                        Full Name
+                    </label>
+
+                    <div class="input-box">
+
+                        <i class="fa-solid fa-user"></i>
+
+                        <input
+                            type="text"
+                            id="patientName"
+                            name="patientName"
+                            placeholder="Enter your full name"
+                            required
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <!-- EMAIL -->
+
+                <div class="form-group">
+
+                    <label for="email">
+                        Email Address
+                    </label>
+
+                    <div class="input-box">
+
+                        <i class="fa-solid fa-envelope"></i>
+
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="Enter your email"
+                            required
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <!-- PHONE -->
+
+                <div class="form-group">
+
+                    <label for="phone">
+                        Phone Number
+                    </label>
+
+                    <div class="input-box">
+
+                        <i class="fa-solid fa-phone"></i>
+
+                        <input
+                            type="tel"
+                            id="phone"
+                            name="phone"
+                            placeholder="Enter your phone number"
+                            required
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <!-- DEPARTMENT + DOCTOR -->
+
+                <div class="form-row">
+
+
+                    <!-- DEPARTMENT -->
+
+                    <div class="form-group">
+
+                        <label for="department">
+                            Department
+                        </label>
+
+                        <div class="input-box">
+
+                            <i class="fa-solid fa-hospital"></i>
+
+                            <select
+                                id="department"
+                                name="department"
+                                required
+                            >
+
+                                <option value="">
+                                    Select Department
+                                </option>
+
+                                <option value="cardiology">
+                                    Cardiology
+                                </option>
+
+                                <option value="neurology">
+                                    Neurology
+                                </option>
+
+                                <option value="orthopaedics">
+                                    Orthopaedics
+                                </option>
+
+                                <option value="paediatrics">
+                                    Paediatrics
+                                </option>
+
+                                <option value="general-medicine">
+                                    General Medicine
+                                </option>
+
+                                <option value="ophthalmology">
+                                    Ophthalmology
+                                </option>
+
+                                <option value="dermatology">
+                                    Dermatology
+                                </option>
+
+                                <option value="gynaecology">
+                                    Gynaecology
+                                </option>
+
+                                <option value="ent">
+                                    ENT
+                                </option>
+
+                                <option value="emergency">
+                                    Emergency Care
+                                </option>
+
+                            </select>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- DOCTOR -->
+
+                    <div class="form-group">
+
+                        <label for="doctor">
+                            Doctor
+                        </label>
+
+                        <div class="input-box">
+
+                            <i class="fa-solid fa-user-doctor"></i>
+
+                            <select
+                                id="doctor"
+                                name="doctor"
+                                required
+                            >
+
+                                <option value="">
+                                    Select Doctor
+                                </option>
+
+                            </select>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- DATE + TIME -->
+
+                <div class="form-row">
+
+
+                    <!-- DATE -->
+
+                    <div class="form-group">
+
+                        <label for="appointmentDate">
+                            Appointment Date
+                        </label>
+
+                        <div class="input-box">
+
+                            <i class="fa-solid fa-calendar"></i>
+
+                            <input
+                                type="date"
+                                id="appointmentDate"
+                                name="appointmentDate"
+                                required
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- TIME -->
+
+                    <div class="form-group">
+
+                        <label for="appointmentTime">
+                            Preferred Time
+                        </label>
+
+                        <div class="input-box">
+
+                            <i class="fa-solid fa-clock"></i>
+
+                            <select
+                                id="appointmentTime"
+                                name="appointmentTime"
+                                required
+                            >
+
+                                <option value="">
+                                    Select Time
+                                </option>
+
+                                <option value="09:00 AM">
+                                    09:00 AM
+                                </option>
+
+                                <option value="10:00 AM">
+                                    10:00 AM
+                                </option>
+
+                                <option value="11:00 AM">
+                                    11:00 AM
+                                </option>
+
+                                <option value="12:00 PM">
+                                    12:00 PM
+                                </option>
+
+                                <option value="02:00 PM">
+                                    02:00 PM
+                                </option>
+
+                                <option value="03:00 PM">
+                                    03:00 PM
+                                </option>
+
+                                <option value="04:00 PM">
+                                    04:00 PM
+                                </option>
+
+                                <option value="05:00 PM">
+                                    05:00 PM
+                                </option>
+
+                                <option value="06:00 PM">
+                                    06:00 PM
+                                </option>
+
+                            </select>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- REASON -->
+
+                <div class="form-group">
+
+                    <label for="reason">
+                        Reason for Visit
+                    </label>
+
+                    <div class="input-box textarea-box">
+
+                        <i class="fa-solid fa-comment-medical"></i>
+
+                        <textarea
+                            id="reason"
+                            name="reason"
+                            rows="4"
+                            placeholder="Briefly describe your reason for visiting"
+                        ></textarea>
+
+                    </div>
+
+                </div>
+
+
+                <!-- SUBMIT BUTTON -->
+
+                <button
+                    type="submit"
+                    class="submit-appointment"
+                >
+
+                    <i class="fa-solid fa-calendar-check"></i>
+
+                    Confirm Appointment
+
+                </button>
+
+
+                <!-- NOTE -->
+
+                <p class="form-note">
+
+                    <i class="fa-solid fa-shield-halved"></i>
+
+                    Your information will be kept secure.
+
+                </p>
+
+
+            </form>
+
+
+            <!-- ================= SUCCESS MESSAGE ================= -->
+
+            <div
+                id="appointmentSuccess"
+                class="appointment-success"
+                style="display: none;"
+            >
+
+                <div class="success-icon">
+
+                    <i class="fa-solid fa-check"></i>
+
+                </div>
+
+                <h3>
+                    Appointment Request Submitted!
+                </h3>
+
+                <p>
+                    Thank you for choosing MediCare+.
+                    Your appointment request has been received.
+                    Our team will contact you to confirm your appointment.
+                </p>
+
+                <a href="doctors.html">
+                    View Our Doctors
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= CTA ================= -->
+
+<section class="cta">
+
+    <div>
+
+        <span>
+            NEED HELP?
+        </span>
+
+        <h2>
+            Have Questions About Your Appointment?
+        </h2>
+
+        <p>
+            Contact our support team for assistance.
+        </p>
+
+    </div>
+
+    <a href="contact.html" class="appointment-btn">
+        Contact Us
+    </a>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <div class="footer-content">
+
+
+        <div class="footer-brand">
+
+            <h2>
+
+                <i class="fa-solid fa-heart-pulse"></i>
+
+                MediCare<span>+</span>
+
+            </h2>
+
+            <p>
+                Integrated Hospital and Pharmacy Management
+                System for convenient and efficient healthcare
+                services.
+            </p>
+
+        </div>
+
+
+        <div class="footer-links">
+
+            <h3>
+                Quick Links
+            </h3>
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="about.html">
+                About Us
+            </a>
+
+            <a href="doctors.html">
+                Doctors
+            </a>
+
+            <a href="appointment.html">
+                Appointments
+            </a>
+
+        </div>
+
+
+        <div class="footer-links">
+
+            <h3>
+                Services
+            </h3>
+
+            <a href="departments.html">
+                Departments
+            </a>
+
+            <a href="pharmacy.html">
+                Pharmacy
+            </a>
+
+            <a href="laboratory.html">
+                Laboratory
+            </a>
+
+            <a href="emergency.html">
+                Emergency
+            </a>
+
+        </div>
+
+
+        <div class="footer-contact">
+
+            <h3>
+                Contact
+            </h3>
+
+            <p>
+                <i class="fa-solid fa-phone"></i>
+                +91 98765 43210
+            </p>
+
+            <p>
+                <i class="fa-solid fa-envelope"></i>
+                support@medicareplus.com
+            </p>
+
+            <p>
+                <i class="fa-solid fa-location-dot"></i>
+                Ahmedabad, Gujarat
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="copyright">
+
+        © 2026 MediCare+. All Rights Reserved.
+
+    </div>
+
+</footer>
+
+
+<!-- ================= MAIN JAVASCRIPT ================= -->
+
+<script src="js/script.js"></script>
+
+
+<!-- ================= APPOINTMENT JAVASCRIPT ================= -->
+
+<script>
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const appointmentForm =
+        document.getElementById("appointmentForm");
+
+    const appointmentSuccess =
+        document.getElementById("appointmentSuccess");
+
+    const dateInput =
+        document.getElementById("appointmentDate");
+
+
+    /* =========================
+       PREVENT PAST DATES
+       ========================= */
+
+    if (dateInput) {
+
+        const today =
+            new Date().toISOString().split("T")[0];
+
+        dateInput.setAttribute("min", today);
+
+    }
+
+
+    /* =========================
+       APPOINTMENT SUBMISSION
+       ========================= */
+
+    
+});
+
+</script>
+
+
+</body>
+
+</html>

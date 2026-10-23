@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laboratory | MediCare+</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="top-bar">
+    <div class="top-left">
+        <span><i class="fa-solid fa-phone"></i> Emergency: +91 98765 43210</span>
+        <span><i class="fa-solid fa-envelope"></i> support@medicareplus.com</span>
+    </div>
+    <div class="top-right">
+        <span><i class="fa-solid fa-clock"></i> 24/7 Healthcare Services</span>
+    </div>
+</div>
+
+<!-- NAVIGATION -->
+<header class="navbar">
+    <div class="logo">
+        <div class="logo-icon">
+            <i class="fa-solid fa-heart-pulse"></i>
+        </div>
+        <div>
+            <h2>MediCare<span>+</span></h2>
+            <small>Hospital & Pharmacy</small>
+        </div>
+    </div>
+
+    <nav id="navMenu">
+        <a href="index.html"><i class="fa-solid fa-house"></i> Home</a>
+        <a href="about.html">About Us</a>
+        <a href="departments.html">Departments</a>
+        <a href="doctors.html">Doctors</a>
+        <a href="appointment.html">Appointments</a>
+        <a href="pharmacy.html">Pharmacy</a>
+        <a href="laboratory.html" class="active">Laboratory</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <div class="nav-actions">
+        <a href="login.html" class="login-btn">
+            <i class="fa-solid fa-user"></i> Login
+        </a>
+        <a href="appointment.html" class="appointment-btn">Book Appointment</a>
+    </div>
+
+    <button class="menu-btn" id="menuBtn" type="button" aria-label="Open menu">
+        <i class="fa-solid fa-bars"></i>
+    </button>
+</header>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+    <div>
+        <span class="section-tag">LABORATORY</span>
+        <h1>Laboratory & Diagnostic Tests</h1>
+        <p>
+            Book common laboratory tests and diagnostic services
+            conveniently through MediCare+.
+        </p>
+    </div>
+</section>
+
+<!-- INTRODUCTION -->
+<section class="about-preview">
+    <div class="about-image">
+        <div class="experience-card">
+            <strong>24/7</strong>
+            <span>Diagnostic Support</span>
+        </div>
+    </div>
+
+    <div class="about-content">
+        <span class="section-tag">MEDICAL DIAGNOSTICS</span>
+        <h2>Reliable Testing for <span>Better Healthcare</span></h2>
+
+        <p>
+            MediCare+ provides convenient access to common laboratory
+            and diagnostic tests. Patients can select a test, check its
+            price and submit a booking request.
+        </p>
+
+        <div class="about-points">
+            <div><i class="fa-solid fa-circle-check"></i> <span>Common diagnostic tests</span></div>
+            <div><i class="fa-solid fa-circle-check"></i> <span>Simple online test booking</span></div>
+            <div><i class="fa-solid fa-circle-check"></i> <span>Clear test information and pricing</span></div>
+            <div><i class="fa-solid fa-circle-check"></i> <span>Patient-friendly laboratory services</span></div>
+        </div>
+    </div>
+</section>
+
+<!-- LABORATORY TESTS -->
+<section class="departments">
+    <div class="section-heading">
+        <span class="section-tag">OUR TESTS</span>
+        <h2>Common Laboratory Tests</h2>
+        <p>Choose a test to book your laboratory appointment.</p>
+    </div>
+
+    <div class="department-grid">
+
+        <div class="department-card">
+            <i class="fa-solid fa-droplet"></i>
+            <h3>Complete Blood Count</h3>
+            <p>Measures red blood cells, white blood cells and other important blood components.</p>
+            <strong>₹400</strong><br><br>
+            <a href="#bookTest" data-test="Complete Blood Count">
+                Book Test <i class="fa-solid fa-arrow-right"></i>
+            </a>
+        </div>
+
+        <div class="department-card">
+            <i class="fa-solid fa-vial"></i>
+            <h3>Blood Sugar Test</h3>
+            <p>Measures blood glucose levels for diabetes screening and monitoring.</p>
+            <strong>₹200</strong><br><br>
+            <a href="#bookTest" data-test="Blood Sugar Test">
+                Book Test <i class="fa-solid fa-arrow-right"></i>
+            </a>
+        </div>
+
+        <div class="department-card">
+            <i class="fa-solid fa-heart-pulse"></i>
+            <h3>Lipid Profile</h3>
+            <p>Checks cholesterol and triglyceride levels to assess cardiovascular health.</p>
+            <strong>₹700</strong><br><br>
+            <a href="#bookTest" data-test="Lipid Profile">
+                Book Test <i class="fa-solid fa-arrow-right"></i>
+            </a>
+        </div>
+
+        <div class="department-card">
+            <i class="fa-solid fa-flask"></i>
+            <h3>Liver Function Test</h3>
+            <p>Evaluates liver health using important blood markers.</p>
+            <strong>₹800</strong><br><br>
+            <a href="#bookTest" data-test="Liver Function Test">
+                Book Test <i class="fa-solid fa-arrow-right"></i>
+            </a>
+        </div>
+
+        <div class="department-card">
+            <i class="fa-solid fa-vial"></i>
+            <h3>Kidney Function Test</h3>
+            <p>Helps evaluate kidney function using important blood and urine measurements.</p>
+            <strong>₹750</strong><br><br>
+            <a href="#bookTest" data-test="Kidney Function Test">
+                Book Test <i class="fa-solid fa-arrow-right"></i>
+            </a>
+        </div>
+
+        <div class="department-card">
+            <i class="fa-solid fa-dna"></i>
+            <h3>Thyroid Profile</h3>
+            <p>Measures thyroid-related hormones to help evaluate thyroid function.</p>
+            <strong>₹650</strong><br><br>
+            <a href="#bookTest" data-test="Thyroid Profile">
+                Book Test <i class="fa-solid fa-arrow-right"></i>
+            </a>
+        </div>
+
+        <div class="department-card">
+            <i class="fa-solid fa-prescription-bottle"></i>
+            <h3>Urine Routine Test</h3>
+            <p>Examines urine for common indicators of infection and other health conditions.</p>
+            <strong>₹250</strong><br><br>
+            <a href="#bookTest" data-test="Urine Routine Test">
+                Book Test <i class="fa-solid fa-arrow-right"></i>
+            </a>
+        </div>
+
+        <div class="department-card">
+            <i class="fa-solid fa-heart"></i>
+            <h3>ECG Test</h3>
+            <p>Records the electrical activity of the heart for basic cardiac evaluation.</p>
+            <strong>₹500</strong><br><br>
+            <a href="#bookTest" data-test="ECG Test">
+                Book Test <i class="fa-solid fa-arrow-right"></i>
+            </a>
+        </div>
+
+        <div class="department-card">
+            <i class="fa-solid fa-capsules"></i>
+            <h3>Vitamin D Test</h3>
+            <p>Measures vitamin D levels in the blood.</p>
+            <strong>₹900</strong><br><br>
+            <a href="#bookTest" data-test="Vitamin D Test">
+                Book Test <i class="fa-solid fa-arrow-right"></i>
+            </a>
+        </div>
+
+        <div class="department-card">
+            <i class="fa-solid fa-chart-line"></i>
+            <h3>HbA1c Test</h3>
+            <p>Estimates average blood glucose levels over the previous few months.</p>
+            <strong>₹500</strong><br><br>
+            <a href="#bookTest" data-test="HbA1c Test">
+                Book Test <i class="fa-solid fa-arrow-right"></i>
+            </a>
+        </div>
+
+    </div>
+</section>
+
+<!-- BOOK TEST -->
+<section class="appointment-page" id="bookTest">
+    <div class="appointment-container">
+
+        <div class="appointment-info">
+            <span class="section-tag">BOOK A TEST</span>
+            <h2>Schedule Your Laboratory Test</h2>
+            <p>
+                Enter your details and select the test you want to book.
+                Our laboratory team will contact you for confirmation.
+            </p>
+
+            <div class="appointment-info-box">
+                <div class="info-icon"><i class="fa-solid fa-flask"></i></div>
+                <div>
+                    <h3>Reliable Testing</h3>
+                    <p>Laboratory services for routine health checkups and diagnostics.</p>
+                </div>
+            </div>
+
+            <div class="appointment-info-box">
+                <div class="info-icon"><i class="fa-solid fa-calendar-check"></i></div>
+                <div>
+                    <h3>Easy Booking</h3>
+                    <p>Select your preferred date and laboratory test.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="appointment-form-container">
+            <div class="form-heading">
+                <h2>Test Booking Form</h2>
+                <p>Please provide the required information.</p>
+            </div>
+
+            <!-- Form now sends data to the PHP backend -->
+            <form id="labForm" action="lab-booking.php" method="POST">
+
+                <div class="form-group">
+                    <label for="labName">Full Name</label>
+                    <div class="input-box">
+                        <i class="fa-solid fa-user"></i>
+                        <input
+                            type="text"
+                            id="labName"
+                            name="patient_name"
+                            placeholder="Enter your full name"
+                            maxlength="100"
+                            autocomplete="name"
+                            required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="labPhone">Phone Number</label>
+                    <div class="input-box">
+                        <i class="fa-solid fa-phone"></i>
+                        <input
+                            type="tel"
+                            id="labPhone"
+                            name="mobile"
+                            placeholder="Enter your 10-digit phone number"
+                            pattern="[0-9]{10}"
+                            maxlength="10"
+                            inputmode="numeric"
+                            autocomplete="tel"
+                            required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="labEmail">Email Address</label>
+                    <div class="input-box">
+                        <i class="fa-solid fa-envelope"></i>
+                        <input
+                            type="email"
+                            id="labEmail"
+                            name="email"
+                            placeholder="Enter your email address"
+                            maxlength="150"
+                            autocomplete="email"
+                            required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="labTest">Select Test</label>
+                    <div class="input-box">
+                        <i class="fa-solid fa-flask"></i>
+                        <select id="labTest" name="test_name" required>
+                            <option value="">Select Laboratory Test</option>
+                            <option value="Complete Blood Count">Complete Blood Count - ₹400</option>
+                            <option value="Blood Sugar Test">Blood Sugar Test - ₹200</option>
+                            <option value="Lipid Profile">Lipid Profile - ₹700</option>
+                            <option value="Liver Function Test">Liver Function Test - ₹800</option>
+                            <option value="Kidney Function Test">Kidney Function Test - ₹750</option>
+                            <option value="Thyroid Profile">Thyroid Profile - ₹650</option>
+                            <option value="Urine Routine Test">Urine Routine Test - ₹250</option>
+                            <option value="ECG Test">ECG Test - ₹500</option>
+                            <option value="Vitamin D Test">Vitamin D Test - ₹900</option>
+                            <option value="HbA1c Test">HbA1c Test - ₹500</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="labDate">Preferred Date</label>
+                        <div class="input-box">
+                            <i class="fa-solid fa-calendar"></i>
+                            <input
+                                type="date"
+                                id="labDate"
+                                name="booking_date"
+                                required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="labTime">Preferred Time</label>
+                        <div class="input-box">
+                            <i class="fa-solid fa-clock"></i>
+                            <select id="labTime" name="booking_time" required>
+                                <option value="">Select Time</option>
+                                <option value="08:00 AM">08:00 AM</option>
+                                <option value="09:00 AM">09:00 AM</option>
+                                <option value="10:00 AM">10:00 AM</option>
+                                <option value="11:00 AM">11:00 AM</option>
+                                <option value="12:00 PM">12:00 PM</option>
+                                <option value="02:00 PM">02:00 PM</option>
+                                <option value="03:00 PM">03:00 PM</option>
+                                <option value="04:00 PM">04:00 PM</option>
+                                <option value="05:00 PM">05:00 PM</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <button type="submit" class="submit-appointment">
+                    <i class="fa-solid fa-calendar-check"></i>
+                    Book Laboratory Test
+                </button>
+
+                <p class="form-note">
+                    <i class="fa-solid fa-shield-halved"></i>
+                    Your information will be kept secure.
+                </p>
+            </form>
+        </div>
+    </div>
+</section>
+
+<!-- CTA -->
+<section class="cta">
+    <div>
+        <span>NEED A TEST?</span>
+        <h2>Take the Next Step for Your Health</h2>
+        <p>Book your laboratory test through MediCare+.</p>
+    </div>
+    <a href="#bookTest" class="appointment-btn">Book Test</a>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <div class="footer-content">
+
+        <div class="footer-brand">
+            <h2><i class="fa-solid fa-heart-pulse"></i> MediCare<span>+</span></h2>
+            <p>
+                Integrated Hospital and Pharmacy Management System
+                for convenient and efficient healthcare services.
+            </p>
+        </div>
+
+        <div class="footer-links">
+            <h3>Quick Links</h3>
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="doctors.html">Doctors</a>
+            <a href="appointment.html">Appointments</a>
+        </div>
+
+        <div class="footer-links">
+            <h3>Services</h3>
+            <a href="departments.html">Departments</a>
+            <a href="pharmacy.html">Pharmacy</a>
+            <a href="laboratory.html">Laboratory</a>
+            <a href="emergency.html">Emergency</a>
+        </div>
+
+        <div class="footer-contact">
+            <h3>Contact</h3>
+            <p><i class="fa-solid fa-phone"></i> +91 98765 43210</p>
+            <p><i class="fa-solid fa-envelope"></i> support@medicareplus.com</p>
+            <p><i class="fa-solid fa-location-dot"></i> Ahmedabad, Gujarat</p>
+        </div>
+
+    </div>
+
+    <div class="copyright">
+        © 2026 MediCare+. All Rights Reserved.
+    </div>
+</footer>
+
+<script src="js/script.js"></script>
+
+<script>
+    const labDate = document.getElementById("labDate");
+    const labTest = document.getElementById("labTest");
+    const labPhone = document.getElementById("labPhone");
+    const labForm = document.getElementById("labForm");
+
+    // Use local date, avoiding UTC date differences.
+    function getLocalDate() {
+        const now = new Date();
+        const year = now.getFullYear();
+        const month = String(now.getMonth() + 1).padStart(2, "0");
+        const day = String(now.getDate()).padStart(2, "0");
+        return `${year}-${month}-${day}`;
+    }
+
+    labDate.min = getLocalDate();
+
+    // Clicking "Book Test" on a test card selects that test.
+    document.querySelectorAll("[data-test]").forEach(function (link) {
+        link.addEventListener("click", function () {
+            labTest.value = this.dataset.test;
+        });
+    });
+
+    // Check the mobile number before sending the form.
+    labForm.addEventListener("submit", function (event) {
+        if (!/^[0-9]{10}$/.test(labPhone.value.trim())) {
+            event.preventDefault();
+            alert("Please enter a valid 10-digit phone number.");
+            labPhone.focus();
+            return;
+        }
+
+        if (labDate.value < getLocalDate()) {
+            event.preventDefault();
+            alert("Please select today or a future date.");
+            labDate.focus();
+        }
+    });
+</script>
+
+</body>
+</html>
